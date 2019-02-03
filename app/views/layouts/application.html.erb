@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Sample</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>nikki</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-  <header>ヘッダー</header>
-    <div>
-      <%= yield %>
-    </div>
-    <footer>フッター</footer>
-  </body>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header>
+      <%= image_tag "nikki.png" ,class: "logo" %></span>
+
+  </header>
+  <div>
+    <%= yield %>
+  </div>
+  <footer>
+chika sugimoto
+  </footer>
+</body>
+
 </html>
