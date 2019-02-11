@@ -1,76 +1,73 @@
 body {
   background-color: #fff;
-  color: #333;
+  color: #565656;
 
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 20px;
+  line-height: 26px;
   text-align: center;
 
-
-  width: 100vw;
-  height: 100vh;
   background-image: image-url('asa1color.jpg');
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #464646;
 
 }
 
-img.logo {
-  width:200px;
-  margin-right: 1000px;
+.logo {
+  width:170px;
+  
 }
 
 header {
-  background-color: rgba(250, 250, 250, 0.3);
-  
-  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 15px 100px;
   margin-bottom: 100px;
-}
-
-footer {
-  background-color: rgba(250, 250, 250, 0.3);
-  padding: 50px 0;
-  margin-top: 300px;
 }
 
 
 .datebox {
   margin: 50px auto;
-  background-color:rgba(250, 250, 250, 0.7);
+  background-color: rgba(250, 250, 250, 0.7);
   padding: 50px;
 }
 
-
+.showbox{
+  display: block; 
+  margin: 0 auto;
+  width:700px;
+}
 
 p,
 ol,
 ul,
 td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 pre {
   background-color: #eee;
   padding: 10px;
-  font-size: 11px;
+  font-size: 16px;
 }
 
 a {
-  color: #000;
+  color: #565656;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
 
   &:visited {
-    color: #666;
+    color: #565656;
   }
 
   &:hover {
     color: #fff;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -83,7 +80,6 @@ td {
 }
 
 div {
-
   &.field,
   &.actions {
     margin-bottom: 10px;
@@ -91,16 +87,20 @@ div {
 }
 
 #notice {
-  color: green;
+  color: skyblue;
+    font-size: 20px;
 }
 
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
+  margin: 0 auto;
 }
 
 #error_explanation {
+  
+  margin: 0 auto;
   width: 450px;
   border: 2px solid red;
   padding: 7px 7px 0;
@@ -113,12 +113,12 @@ div {
     padding: 5px 5px 5px 15px;
     font-size: 12px;
     margin: -7px -7px 0;
-    background-color: #c00;
+    background-color: red;
     color: #fff;
   }
 
   ul li {
-    font-size: 12px;
+    font-size: 16px;
     list-style: square;
   }
 }
@@ -127,7 +127,32 @@ label {
   display: block;
 }
 
-h1 {
+.top {
   text-align: center;
   color: #fff;
+
+  h1 {
+    font-size: 74px;
+    margin-top: 150px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  h3 {
+    font-size: 35px; 
+  }
+
+  a {
+    margin-top: 50px;
+    font-size: 30px;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #565656;
+    }
+  }
 }

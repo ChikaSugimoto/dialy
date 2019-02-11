@@ -12,15 +12,15 @@
 
 <body>
   <header>
-      <%= image_tag "nikki.png" ,class: "logo" %></span>
-
+      <%= link_to root_path do %>
+      <span><%= image_tag "nikki.png" ,class: "logo" %></span>
+      <% end %>
+      
   </header>
   <div>
     <%= yield %>
   </div>
-  <footer>
-chika sugimoto
-  </footer>
+
 </body>
 
 </html>

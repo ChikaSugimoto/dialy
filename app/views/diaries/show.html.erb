@@ -1,28 +1,24 @@
 <p id="notice"><%= notice %></p>
 
+<div class="showbox">
 <p>
-  <strong>ID:</strong>
-  <%= @diary.id %>
-</p>
-
-<p>
-  <strong>タイトル:</strong>
+  <strong>Title:</strong>
   <%= @diary.title %>
 </p>
 <p>
-  <strong>本文:</strong>
+  <strong>Text:</strong>
   <%= @diary.body %>
 </p>
 <p>
-  <strong>登録日時:</strong>
-  <%= @diary.created_at %>
+  <strong>Created Time:</strong>
+  <%= @diary.created_at.strftime('%Y年%-m月%-d日 %H時%M分') %>
 </p>
 <p>
-  <strong>更新日時:</strong>
-  <%= @diary.updated_at %>
+  <strong>Update Time:</strong>
+  <%= @diary.updated_at.strftime('%Y年%-m月%-d日 %H時%M分') %>
 </p>
+</div>
 
-
-<%= link_to '編集', edit_diary_path(@diary) %> |
-<%= link_to '削除', @diary,method: :delete, data: { confirm: '本当に削除しますか？'}  %> |
-<%= link_to '一覧に戻る', diaries_path %>
+<%= link_to 'Edit', edit_diary_path(@diary) %> |
+<%= link_to 'Delete', @diary,method: :delete, data: { confirm: '本当に削除しますか？'}  %> |
+<%= link_to 'Back', diaries_path %>
