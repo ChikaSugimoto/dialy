@@ -1,35 +1,49 @@
 <div class="box">
 
-<p id="notice"><%= notice %></p>
+  <p id="notice">
+    <%= notice %>
+  </p>
 
-<h1>Diary list</h1>
+  <div class="mybirthday">
+    <% if @remainingDay == 0 %>
+    <h2>Today is my birthday !</h2>
+    <% else %>
+    <h3>Countdown to my birthday</h3>
+    <h2><%= @remainingDay.to_i %> DAYS</h2>
+    <% end %>
+  </div>
 
-<table class="datebox">
-  <thead>
-    <tr>
-      <th>No.</th>
-      <th>Title</th>
-      <th>Created Time</th>
-      <th>Updated Time</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% n = 1 
-    @diaries.each do |diary| %>
+  <table class="datebox">
+    <thead>
       <tr>
-        <td><%= link_to n, diary %>  </td>
-        <td><%= link_to diary.title, diary %></td>
-        <td><%= diary.created_at.strftime('%Y年%-m月%-d日 %H時%M分') %></td>
-        <td><%= diary.updated_at.strftime('%Y年%-m月%-d日 %H時%M分') %></td>
+        <th>No.</th>
+        <th>Title</th>
+        <th>Created Time</th>
+        <th>Updated Time</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% n = 1 %>
+      <% @diaries.each do |diary| %>
+      <tr>
+        <td>
+          <%= n %>
+        </td>
+        <td>
+          <%= link_to diary.title, diary %>
+        </td>
+        <td>
+          <%= diary.created_at.strftime('%Y年%-m月%-d日 %H時%M分') %>
+        </td>
+        <td>
+          <%= diary.updated_at.strftime('%Y年%-m月%-d日 %H時%M分') %>
+        </td>
       </tr>
       <% n += 1 %>
       <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'Create New', new_diary_path %>
+    </tbody>
+  </table>
+  <%= link_to 'Create New', new_diary_path %>
 
 </div>
