@@ -9,9 +9,9 @@ class DiariesController < ApplicationController
       # @diaries[i]["number"] = i
       # @diaries[i].store("number",i)
     }
-    today = Date.today
-    future = Date.new(2019, 5, 6)
-    @remainingDay = future - today
+    day = Date.today
+    future = Date.new(2020,5,6)
+    @remainingDay = future - day
   end
 
   # GET /diaries/1
